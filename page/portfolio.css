@@ -1,0 +1,106 @@
+/* set default */
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* start here */
+.wrap {
+    margin: 4% 8%;
+}
+
+.wrap p a{
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrap-por {
+    margin-top: 4%;
+}
+
+.wrap-type {
+    margin-top: 4%;
+}
+
+
+/* accordion type portof */
+.por-type {
+    position: relative;
+    margin: 4% 0;
+}
+
+.por-type input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1; /* Move the checkbox "under" the content */
+}
+
+.por-type h2 {
+    font-size: 1.3rem;
+}
+
+.por-type label {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    padding-left: 2rem;
+    border-bottom: 1px solid;
+    padding-bottom: 0.5rem;
+}
+
+.por-type label::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 10px;
+    border-left: 8px solid black;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    margin-top: -8px;
+}
+
+.por-type input[type="checkbox"]:checked ~ h2 label::before {
+    border-left: 8px solid transparent;
+    border-top: 8px solid black;
+    border-right: 8px solid transparent;
+    margin-left: -4px;
+    margin-top: -4px;
+}
+
+.por-type .por-content {
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 2rem;
+    transition: max-height 0.4s ease;
+    margin: 2% 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.por-type input[type="checkbox"]:checked ~ h2 ~ .por-content {
+    max-height: -moz-fit-content; /* Firefox */
+    max-height: fit-content; /* Edge 79+, Samsung Internet 5.0+ */
+    max-height: auto; /* Standard property */
+}
+
+
+/* content portof */
+.por-type .por-content .item-por a {
+    text-decoration: none;
+    color: inherit;
+}
+
+span {
+    color: grey;
+    font-weight: 400;
+    font-style: italic;
+}

@@ -1,0 +1,37 @@
+/* set default */
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* start here */
+.wrap {
+    margin: 0 8%;
+}
+
+.center-page {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    flex-direction: column;
+}
+
+.wrap h1 {
+    font-size: 2rem;
+}
+
+.menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.menu p {
+    font-weight: 700;
+}
+
+.menu p a {
+    text-decoration: none;
+    color: inherit;
+}
