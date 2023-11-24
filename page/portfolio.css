@@ -83,7 +83,15 @@ html {
     transition: max-height 0.4s ease;
     margin: 2% 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+    .por-type .por-content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
 }
 
 .por-type input[type="checkbox"]:checked ~ h2 ~ .por-content {
